@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: harshtripathi02/ideaincubator-frontend
+    container_name: ideaincubator-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server
+
+  server:
+    image: harshtripathi02/ideaincubator
+    container_name: ideaincubator-server
+    ports:
+      - "5000:5000"
+
+networks:
+  default:
+    external:
+      name: ideaincubator
