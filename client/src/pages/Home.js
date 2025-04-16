@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import IdeaCard from "../components/ideas/IdeaCard"
 import { useAuth } from "../contexts/AuthContext"
-import api from "../services/api"
+import api from "../utils/api"
 
 const Home = () => {
   const { isAuthenticated } = useAuth()

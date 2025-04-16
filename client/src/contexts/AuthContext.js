@@ -1,7 +1,7 @@
 "use client"
 
 import { createContext, useContext, useState, useCallback } from "react"
-import api from "../services/api"
+import api from "../utils/api"
 
 // Create context
 const AuthContext = createContext()
