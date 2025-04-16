@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { useAuth } from "../../contexts/AuthContext"
-import api from "../../services/api"
+import api from "../../utils/api"
 
 const IdeaCard = ({ idea, onUpdate }) => {
   const { user } = useAuth()

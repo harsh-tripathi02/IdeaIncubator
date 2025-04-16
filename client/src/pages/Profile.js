@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { useAuth } from "../contexts/AuthContext"
 import IdeaCard from "../components/ideas/IdeaCard"
-import api from "../services/api"
+import api from "../utils/api"
 
 const Profile = () => {
   const { user, updateProfile, error, setError } = useAuth()

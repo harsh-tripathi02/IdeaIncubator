@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { useParams, useNavigate, Link } from "react-router-dom"
 import { useAuth } from "../contexts/AuthContext"
-import api from "../services/api"
+import api from "../utils/api"
 
 const IdeaDetails = () => {
   const { id } = useParams()

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import IdeaForm from "../components/forms/IdeaForm"
 import { useAuth } from "../contexts/AuthContext"
-import api from "../services/api"
+import api from "../utils/api"
 
 const EditIdea = () => {
   const { id } = useParams()

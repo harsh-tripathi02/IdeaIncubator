@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import IdeaForm from "../components/forms/IdeaForm"
-import api from "../services/api"
+import api from "../utils/api"
 
 const CreateIdea = () => {
   const navigate = useNavigate()
