@@ -22,5 +22,8 @@ EXPOSE 5000
 
 # Define the environment variable for MongoDB URI
 
+# Set the environment to production
+ENV NODE_ENV=production
+
 # Start the application
 CMD ["npm", "run","dev"]
