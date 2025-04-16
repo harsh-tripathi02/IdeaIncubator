@@ -3,7 +3,6 @@ import axios from "axios"
 const api = axios.create({
   baseURL: "https://ideaincubator-api.onrender.com/api", // Update to your backend URL
 })
-
 // Add a request interceptor to include the auth token in all requests
 api.interceptors.request.use(
   (config) => {
