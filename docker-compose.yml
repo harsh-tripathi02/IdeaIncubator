@@ -4,13 +4,11 @@ services:
   server:
     build:
       context: ./server
-      dockerfile: dockerfile
+      dockerfile: Dockerfile 
     ports:
       - "5000:5000"
     env_file:
       - ./server/.env
-    volumes:
-      - ./server:/app
     networks:
       - app_network
 
@@ -20,14 +18,10 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
-    volumes:
-      - ./client:/app
+    depends_on:
+      - server
     networks:
       - app_network
-
-
-volumes:
-  mongo-data:
 
 networks:
   app_network:

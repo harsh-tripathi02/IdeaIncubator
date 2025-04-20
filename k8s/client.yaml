@@ -19,6 +19,9 @@ spec:
         image: harshtripathi02/idea-client:latest
         ports:
         - containerPort: 3000
+        env:
+        - name: REACT_APP_API_URL
+          value: "http://localhost:30000"  # Point to Kubernetes server service
 ---
 apiVersion: v1
 kind: Service

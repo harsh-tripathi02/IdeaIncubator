@@ -13,9 +13,15 @@ RUN npm install
 # Copy the rest of the application code to the working directory
 COPY . .
 
+# Build the application with environment variables
+ENV REACT_APP_API_URL=http://localhost:30000
+RUN npm run build
+
+# Install serve to run the production build
+RUN npm install -g serve
 
 # Expose the port the app runs on
 EXPOSE 3000
 
-# Start the application in development mode
-CMD ["npm", "start"]
+# Start the production server
+CMD ["serve", "-s", "build", "-l", "3000"]

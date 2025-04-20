@@ -11,13 +11,8 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Configure CORS with specific options
-app.use(cors({
-  origin: ['http://localhost:30001', 'http://localhost:3000'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
-}));
+// Allow CORS for all origins
+app.use(cors());
 
 // Body parser middleware
 app.use(express.json());
