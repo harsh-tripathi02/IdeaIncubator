@@ -1,7 +1,6 @@
 # Use the official Node.js image as the base image
 FROM node:16-slim
 
-
 # Set the working directory in the container
 WORKDIR /app
 
@@ -11,7 +10,6 @@ COPY package.json package-lock.json ./
 # Install dependencies
 RUN npm install
 
-
 # Copy the rest of the application code to the working directory
 COPY . .
 
@@ -19,5 +17,5 @@ COPY . .
 # Expose the port the app runs on
 EXPOSE 3000
 
-# Start the application
+# Start the application in development mode
 CMD ["npm", "start"]

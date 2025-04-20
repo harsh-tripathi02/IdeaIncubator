@@ -1,8 +1,8 @@
 import axios from "axios"
 
-// Create axios instance with base URL
+// Create axios instance with base URL from environment variable
 const api = axios.create({
-  baseURL: "http://localhost:5000/api", // Adjust this to your backend URL
+  baseURL:  "http://localhost:5000",
 })
 
 // Add a request interceptor to include the auth token in all requests
