@@ -4,6 +4,9 @@ FROM node:16-slim
 # Set the working directory in the container
 WORKDIR /app
 
+#Declare arguments for build and production stages
+ARG REACT_APP_API_URL
+
 # Copy package.json and package-lock.json to the working directory
 COPY package.json package-lock.json ./
 
@@ -14,7 +17,7 @@ RUN npm install
 COPY . .
 
 # Build the application with environment variables
-ENV REACT_APP_API_URL=http://localhost:30000/api
+ENV REACT_APP_API_URL=$REACT_APP_API_URL
 RUN npm run build
 
 # Install serve to run the production build
