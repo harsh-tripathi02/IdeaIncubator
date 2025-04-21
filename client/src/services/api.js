@@ -2,7 +2,7 @@ import axios from "axios"
 
 // Create axios instance with base URL
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || "http://localhost:30000", // Use environment variable with fallback
+  baseURL: process.env.REACT_APP_API_URL || "http://localhost:30000/api", // Use environment variable with fallback
 })
 
 // Add a request interceptor to include the auth token in all requests

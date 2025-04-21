@@ -21,7 +21,7 @@ spec:
         - containerPort: 3000
         env:
         - name: REACT_APP_API_URL
-          value: "http://localhost:30000"  # Point to Kubernetes server service
+          value: "http://localhost:30000/api"  
 ---
 apiVersion: v1
 kind: Service

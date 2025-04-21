@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: app-config
 data:
-  api-url: "http://localhost:5000"  
+  api-url: "http://localhost:30000/api"  
 ---
 apiVersion: v1
 kind: Secret

@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Build the application with environment variables
-ENV REACT_APP_API_URL=http://localhost:30000
+ENV REACT_APP_API_URL=http://localhost:30000/api
 RUN npm run build
 
 # Install serve to run the production build
